@@ -9,10 +9,10 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>gt.edu.umg</groupId>
-	<artifactId>SingleResponsabilityProblem</artifactId>
+	<artifactId>SingleResponsabilitySolution</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>SingleResponsabilityProblem</name>
-	<description>Problema para el principio de responsabilidad unica</description>
+	<name>SingleResponsabilitySolution</name>
+	<description>solucion a ejemplo responsabilidad unica</description>
 	<properties>
 		<java.version>11</java.version>
 	</properties>

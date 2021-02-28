@@ -1,11 +1,11 @@
-package gt.edu.umg.SingleResponsabilityProblem;
+package gt.edu.umg.SingleResponsabilitySolution;
 
 import java.util.*;
 
 /**
  * 
  */
-public class Character {
+public class Character implements CharacterAction {
 
     /**
      * Default constructor
@@ -96,41 +96,55 @@ public class Character {
         // TODO implement here
         this.attack_speed = attack_speed;
     }
-
+    
     /**
-     * 
-     * @return 
+     * @param name
+     * @param strenght
+     * @param vitality
+     * @param attack_speed
      */
+    
+    public Character(String name, int strenght, int vitality, int attack_speed) {
+        this.name = name;
+        this.strenght = strenght;
+        this.vitality = vitality;
+        this.attack_speed = attack_speed;
+    }  
+    
+    /**
+     * @return
+     */
+    @Override
     public String jump() {
+        // TODO implement here
         return " is jumping";
-        // TODO implement here
     }
 
     /**
-     * 
-     * @return 
+     * @return
      */
+    @Override
     public String move_forward() {
+        // TODO implement here
         return " is moving forward";
-        // TODO implement here
     }
 
     /**
-     * 
-     * @return 
+     * @return
      */
+    @Override
     public String move_backward() {
-        return " is moving backward";
         // TODO implement here
+        return " is moving backward";
     }
 
     /**
-     * 
-     * @return 
+     * @return
      */
+    @Override
     public String run() {
-        return " is running";
         // TODO implement here
+        return " is running";
     }
 
 }
