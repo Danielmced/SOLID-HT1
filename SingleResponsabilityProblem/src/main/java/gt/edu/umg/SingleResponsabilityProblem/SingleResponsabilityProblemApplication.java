@@ -37,6 +37,7 @@ public class SingleResponsabilityProblemApplication {
      * @param attack_speed
      * @return
      */
+    /* SingleResponsabilityProblemApplication tiene la responsabilidad de interactuar con el usuario y generar los mensajes de la rutina del npc*/
     @RequestMapping("/")
     public String index(@RequestParam(defaultValue = "Mike") String name, 
             @RequestParam(defaultValue = "1") int strenght,
