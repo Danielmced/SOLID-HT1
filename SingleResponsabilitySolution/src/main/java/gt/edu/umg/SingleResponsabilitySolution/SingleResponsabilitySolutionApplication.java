@@ -36,6 +36,7 @@ public class SingleResponsabilitySolutionApplication {
      * @param attack_speed 
      * @return
      */
+    /* SingleResponsabilitySolutionApplication ahora solo esta encargado de crear instancias y responder al usuario*/
     @RequestMapping("/")
     public String index(@RequestParam(defaultValue = "Mike") String name,
             @RequestParam(defaultValue = "1") int strenght, 
@@ -46,8 +47,7 @@ public class SingleResponsabilitySolutionApplication {
         Character npc = new Character(name, strenght, vitality, attack_speed); 
         CharacterService genereteroutine = new CharacterService();
         
-        texto += genereteroutine.routine(npc);
-        
+        texto += genereteroutine.routine(npc);        
         
         return texto;
     }
