@@ -1,15 +1,10 @@
 package gt.edu.umg.OpenClosedProblem;
 
-import java.util.*;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
-
-/**
- * 
- */
 
 @SpringBootApplication
 
@@ -17,29 +12,24 @@ import org.springframework.web.bind.annotation.RestController;
 public class OpenClosedProblemApplication {
 
     /**
-     * Default constructor
-     */
-    public OpenClosedProblemApplication() {
-    }
-
-    /**
      * @param args
      */
     public static void main(String[] args) {
-        // TODO implement here
         SpringApplication.run(OpenClosedProblemApplication.class, args);
     }
 
     /**
-     * @param characterType 
+     * @param characterName
      * @return
      */
-    @RequestMapping("/")
-    public String index(@RequestParam(defaultValue = "Protagonist") String characterType) {
-        // TODO implement here
-        CharacterTypeSelection event = new CharacterTypeSelection();
-        
-        return event.eventAction(characterType);
+    @GetMapping("/")
+    public String index(@RequestParam(defaultValue = "Daniel") String characterName) {
+        CharacterTypeSelection role = new CharacterTypeSelection();       
+        String text = "";   
+        text += characterName + role.characterSelection("protagonist");
+        text += "<br>";
+        text += "Voldemort " + role.characterSelection("antagonist");
+        return text;
     }
 
 }
