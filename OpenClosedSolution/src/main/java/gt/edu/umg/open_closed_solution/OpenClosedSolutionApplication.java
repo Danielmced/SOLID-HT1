@@ -24,7 +24,7 @@ public class OpenClosedSolutionApplication {
      * @return
      */
     @GetMapping("/")
-    public String index(@RequestParam(defaultValue = "Protagonist") String characterName) {
+    public String index(@RequestParam(defaultValue = "Daniel") String characterName) {
         String text = new String();
         text += characterName + new Protagonist().characterSelection();
         text += "<br>";
