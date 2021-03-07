@@ -1,10 +1,6 @@
-package gt.edu.umg.OpenClosedSolution;
+package gt.edu.umg.open_closed_solution;
 
-import java.util.*;
 
-/**
- * 
- */
 public interface ICharacterTypeSelection {
 
     /**

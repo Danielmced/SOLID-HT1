@@ -1,9 +1,8 @@
-package gt.edu.umg.OpenClosedSolution;
+package gt.edu.umg.open_closed_solution;
 
-import java.util.*;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -15,17 +14,11 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class OpenClosedSolutionApplication {
 
-    /**
-     * Default constructor
-     */
-    public OpenClosedSolutionApplication() {
-    }
 
     /**
      * @param args
      */
     public static void main(String[] args) {
-        // TODO implement here
         SpringApplication.run(OpenClosedSolutionApplication.class, args);
     }
 
@@ -33,9 +26,8 @@ public class OpenClosedSolutionApplication {
      * @param characterType 
      * @return
      */
-    @RequestMapping("/")
+    @GetMapping("/")
     public String index(@RequestParam(defaultValue = "Protagonist") String characterType) {
-        // TODO implement here
         String text = new String();
         ICharacterTypeSelection select = new Protagonist();
         text += select.eventAction(characterType);

@@ -1,17 +1,12 @@
-package gt.edu.umg.OpenClosedSolution;
+package gt.edu.umg.open_closed_solution;
 
-import java.util.*;
+
 
 /**
  * 
  */
 public class Antagonist implements ICharacterTypeSelection {
-
-    /**
-     * Default constructor
-     */
-    public Antagonist() {
-    }
+  
 
     /**
      * @param characterType 
@@ -19,8 +14,7 @@ public class Antagonist implements ICharacterTypeSelection {
      */
     @Override
     public String eventAction(String characterType) {
-        // TODO implement here
-        String text = new String();
+        String text = "";
         
         if("antagonist".equals(characterType.toLowerCase())){
             text += "Hi antagonist. Your role is destroy the world!!!!!";
