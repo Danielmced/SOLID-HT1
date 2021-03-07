@@ -6,9 +6,6 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
-/**
- * 
- */
 @SpringBootApplication
 
 @RestController
@@ -23,18 +20,15 @@ public class OpenClosedSolutionApplication {
     }
 
     /**
-     * @param characterType 
+     * @param characterName
      * @return
      */
     @GetMapping("/")
-    public String index(@RequestParam(defaultValue = "Protagonist") String characterType) {
+    public String index(@RequestParam(defaultValue = "Protagonist") String characterName) {
         String text = new String();
-        ICharacterTypeSelection select = new Protagonist();
-        text += select.eventAction(characterType);
-        select = new Antagonist();
-        text += select.eventAction(characterType);
-        /*intente recorrer las clases como en js pero no supe como, asi que realmente no 
-        llegue a ninguna solución el problema sigue estando presente, pero en otra clase xD*/
+        text += characterName + new Protagonist().characterSelection();
+        text += "<br>";
+        text += "Voldemort" + new Antagonist().characterSelection();
         return text;
     }
 
