@@ -1,17 +1,9 @@
-package gt.edu.umg.SingleResponsabilityProblem;
-
-import java.util.*;
+package gt.edu.umg.single_responsability_problem;
 
 /**
  * 
  */
 public class Character {
-
-    /**
-     * Default constructor
-     */
-    public Character() {
-    }
 
     /**
      * 
@@ -37,7 +29,6 @@ public class Character {
      * @return
      */
     public String getName() {
-        // TODO implement here
         return name;
     }
 
@@ -45,7 +36,6 @@ public class Character {
      * @return
      */
     public int getStrenght() {
-        // TODO implement here
         return strenght;
     }
 
@@ -53,7 +43,6 @@ public class Character {
      * @return
      */
     public int getVitality() {
-        // TODO implement here
         return vitality;
     }
 
@@ -61,7 +50,6 @@ public class Character {
      * @return
      */
     public int getAttack_speed() {
-        // TODO implement here
         return attack_speed;
     }
 
@@ -69,7 +57,6 @@ public class Character {
      * @param name
      */
     public void setName(String name) {
-        // TODO implement here
         this.name = name;
     }
 
@@ -77,7 +64,6 @@ public class Character {
      * @param strenght
      */
     public void setStrenght(int strenght) {
-        // TODO implement here
         this.strenght = strenght;
     }
 
@@ -85,7 +71,6 @@ public class Character {
      * @param vitality
      */
     public void setVitality(int vitality) {
-        // TODO implement here
         this.vitality = vitality;
     }
 
@@ -93,7 +78,6 @@ public class Character {
      * @param attack_speed
      */
     public void setAttack_speed(int attack_speed) {
-        // TODO implement here
         this.attack_speed = attack_speed;
     }
 
@@ -103,7 +87,6 @@ public class Character {
      */
     public String jump() {
         return " is jumping";
-        // TODO implement here
     }
 
     /**
@@ -112,7 +95,6 @@ public class Character {
      */
     public String move_forward() {
         return " is moving forward";
-        // TODO implement here
     }
 
     /**
@@ -121,7 +103,6 @@ public class Character {
      */
     public String move_backward() {
         return " is moving backward";
-        // TODO implement here
     }
 
     /**
@@ -130,7 +111,22 @@ public class Character {
      */
     public String run() {
         return " is running";
-        // TODO implement here
+    }
+    
+    /**
+     * 
+     * @return 
+     */
+    public String generateRoutine(Character npc){
+        String texto="";
+        texto += "NPC: "+npc.getName()+"<br> Strenght: "+npc.getStrenght()+"<br> Vitality: "+npc.getVitality()+
+                "<br> Attack_speed: "+npc.getAttack_speed();
+        
+        texto += "<br>**"+npc.getName()+npc.jump()+"**<br>";
+        texto += "<br>**"+npc.getName()+npc.run()+"**<br>";
+        texto += "<br>**"+npc.getName()+npc.move_backward()+"**<br>";
+        texto += "<br>**"+npc.getName()+npc.move_forward()+"**<br>";
+        return texto;
     }
 
 }

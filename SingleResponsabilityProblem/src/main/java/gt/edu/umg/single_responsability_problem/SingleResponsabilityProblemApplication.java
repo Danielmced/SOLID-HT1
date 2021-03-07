@@ -1,6 +1,5 @@
-package gt.edu.umg.SingleResponsabilityProblem;
+package gt.edu.umg.single_responsability_problem;
 
-import java.util.*;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -16,16 +15,9 @@ import org.springframework.web.bind.annotation.RestController;
 public class SingleResponsabilityProblemApplication {
     
     /**
-     * Default constructor
-     */
-    public SingleResponsabilityProblemApplication() {
-    }
-
-    /**
      * @param args
      */
     public static void main(String[] args) {
-        // TODO implement here
         SpringApplication.run(SingleResponsabilityProblemApplication.class, args);
         
     }
@@ -37,14 +29,11 @@ public class SingleResponsabilityProblemApplication {
      * @param attack_speed
      * @return
      */
-    /* SingleResponsabilityProblemApplication tiene la responsabilidad de interactuar con el usuario y generar los mensajes de la rutina del npc*/
     @RequestMapping("/")
     public String index(@RequestParam(defaultValue = "Mike") String name, 
             @RequestParam(defaultValue = "1") int strenght,
             @RequestParam(defaultValue = "10") int vitality, 
             @RequestParam(defaultValue = "1") int attack_speed){
-        // TODO implement here
-        String texto = new String();
         Character npc = new Character();        
         
         npc.setName(name);
@@ -52,14 +41,7 @@ public class SingleResponsabilityProblemApplication {
         npc.setVitality(vitality);
         npc.setAttack_speed(attack_speed);
         
-        texto += "NPC: "+npc.getName()+"<br> Strenght: "+npc.getStrenght()+"<br> Vitality: "+npc.getVitality()+
-                "<br> Attack_speed: "+npc.getAttack_speed();
-        
-        texto += "<br>**"+npc.getName()+npc.jump()+"**<br>";
-        texto += "<br>**"+npc.getName()+npc.run()+"**<br>";
-        texto += "<br>**"+npc.getName()+npc.move_backward()+"**<br>";
-        texto += "<br>**"+npc.getName()+npc.move_forward()+"**<br>";
-        return texto;
+        return npc.generateRoutine(npc);
     }
 
 }
