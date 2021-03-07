@@ -1036,8 +1036,8 @@
 									},
 									"visible": false,
 									"font": "Arial;13;0",
-									"left": 530,
-									"top": 222,
+									"left": 576,
+									"top": 313,
 									"height": 13,
 									"alpha": 1.5707963267948966,
 									"distance": 15,
@@ -1057,8 +1057,8 @@
 									},
 									"visible": null,
 									"font": "Arial;13;0",
-									"left": 530,
-									"top": 207,
+									"left": 561,
+									"top": 313,
 									"height": 13,
 									"alpha": 1.5707963267948966,
 									"distance": 30,
@@ -1078,8 +1078,8 @@
 									},
 									"visible": false,
 									"font": "Arial;13;0",
-									"left": 530,
-									"top": 252,
+									"left": 605,
+									"top": 314,
 									"height": 13,
 									"alpha": -1.5707963267948966,
 									"distance": 15,
@@ -1096,7 +1096,7 @@
 							"tail": {
 								"$ref": "AAAAAAF36fvDepNmGG4="
 							},
-							"points": "481:243;579.568603515625:243",
+							"points": "481:320;591:320;591:255",
 							"showVisibility": true,
 							"nameLabel": {
 								"$ref": "AAAAAAF36hQ7O5Sw/SA="
@@ -1407,7 +1407,7 @@
 											"top": 423,
 											"width": 289.376953125,
 											"height": 13,
-											"text": "CharacterService"
+											"text": "CharacterRoutine"
 										},
 										{
 											"_type": "LabelView",
@@ -1494,7 +1494,7 @@
 											"top": 456,
 											"width": 289.376953125,
 											"height": 13,
-											"text": "+routine(character: Character): String",
+											"text": "+generateRoutine(character: Character): String",
 											"horizontalAlignment": 0
 										}
 									],
@@ -2138,7 +2138,7 @@
 													"_parent": {
 														"$ref": "AAAAAAF36fl1dpGBuPg="
 													},
-													"name": "CharacterService",
+													"name": "CharacterRoutine",
 													"operations": [
 														{
 															"_type": "UMLOperation",
@@ -2146,7 +2146,7 @@
 															"_parent": {
 																"$ref": "AAAAAAF36hghm5Tz9Zk="
 															},
-															"name": "routine",
+															"name": "generateRoutine",
 															"parameters": [
 																{
 																	"_type": "UMLParameter",

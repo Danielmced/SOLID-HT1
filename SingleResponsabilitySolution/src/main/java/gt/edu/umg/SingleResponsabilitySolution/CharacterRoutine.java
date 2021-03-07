@@ -1,24 +1,12 @@
 package gt.edu.umg.SingleResponsabilitySolution;
 
-import java.util.*;
-
-/**
- * 
- */
-public class CharacterService {
-
-    /**
-     * Default constructor
-     */
-    public CharacterService() {
-    }
+public class CharacterRoutine {
 
     /**
      * @param character 
      * @return
      */
-    public String routine(Character character) {
-        // TODO implement here
+    public String generateRoutine(Character character) {
         String texto = new String();
         texto += "NPC: "+character.getName()+
                 "<br> Strenght: "+character.getStrenght()+

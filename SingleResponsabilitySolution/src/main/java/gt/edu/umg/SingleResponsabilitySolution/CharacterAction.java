@@ -1,10 +1,5 @@
 package gt.edu.umg.SingleResponsabilitySolution;
 
-import java.util.*;
-
-/**
- * 
- */
 public interface CharacterAction {
 
     /**
