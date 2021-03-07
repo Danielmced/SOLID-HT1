@@ -1,28 +1,13 @@
 package gt.edu.umg.single_responsability_problem;
 
-/**
- * 
- */
 public class Character {
 
-    /**
-     * 
-     */
     private String name;
 
-    /**
-     * 
-     */
     private int strenght;
 
-    /**
-     * 
-     */
     private int vitality;
 
-    /**
-     * 
-     */
     private int attack_speed;
 
     /**
@@ -115,6 +100,7 @@ public class Character {
     
     /**
      * 
+     * @param npc
      * @return 
      */
     public String generateRoutine(Character npc){
