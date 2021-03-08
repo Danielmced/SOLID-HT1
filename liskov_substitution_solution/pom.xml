@@ -9,10 +9,10 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>gt.edu.umg</groupId>
-	<artifactId>LiskovSubstitutionProblem</artifactId>
+	<artifactId>liskov_substitution_solution</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>LiskovSubstitutionProblem</name>
-	<description>problema de ejemplo para Liskov Substitution principle</description>
+	<name>liskov_substitution_solution</name>
+	<description>Solución para el ejemplo de principio de substitución de liskov</description>
 	<properties>
 		<java.version>11</java.version>
 	</properties>

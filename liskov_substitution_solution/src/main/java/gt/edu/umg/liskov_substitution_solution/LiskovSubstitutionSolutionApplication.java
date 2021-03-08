@@ -1,4 +1,4 @@
-package gt.edu.umg.liskov_substitution_problem;
+package gt.edu.umg.liskov_substitution_solution;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -9,34 +9,34 @@ import org.springframework.web.bind.annotation.RestController;
 @SpringBootApplication
 
 @RestController
-public class LiskovSubstitutionProblemApplication {
+public class LiskovSubstitutionSolutionApplication {
+
 
     /**
      * @param args
      */
     public static void main(String[] args) {
-        SpringApplication.run(LiskovSubstitutionProblemApplication.class, args);
+        SpringApplication.run(LiskovSubstitutionSolutionApplication.class, args);
     }
 
     /**
      * @param npc 
      * @return
-     * @throws java.lang.Exception
      */
     @GetMapping("/")
-    public String index(@RequestParam(defaultValue = "Dragon") String npc) throws Exception {
+    public String index(@RequestParam(defaultValue = "Dragon") String npc) {
         String text = "";
         if("dragon".equalsIgnoreCase(npc)){
             DragonNPC dragon = new DragonNPC();
-            text += "<br>Dragon " + dragon.Fly();
-            text += "<br>Dragon " + dragon.Swim();
+            text += "<br>Dragon " + dragon.fly();
+            text += "<br>Dragon " + dragon.walk();
         }
         if("human".equalsIgnoreCase(npc)){
             HumanNPC human = new HumanNPC();
-            text += "<br>Human " + human.Fly();
-            text += "<br>Human " + human.Swim();
-            text += "<br>Human " + human.Walk();
-        }        
+            text += "<br>Human " + human.swim();
+            text += "<br>Human " + human.walk();
+        }     
         return text;
     }
+
 }
