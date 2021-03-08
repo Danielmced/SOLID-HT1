@@ -1,56 +1,42 @@
-package gt.edu.umg.LiskovSubstitutionProblem;
+package gt.edu.umg.liskov_substitution_problem;
 
-import java.util.*;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
-/**
- * 
- */
 @SpringBootApplication
 
 @RestController
 public class LiskovSubstitutionProblemApplication {
 
     /**
-     * Default constructor
-     */
-    public LiskovSubstitutionProblemApplication() {
-    }
-
-    /**
      * @param args
      */
     public static void main(String[] args) {
-        // TODO implement here
         SpringApplication.run(LiskovSubstitutionProblemApplication.class, args);
     }
 
     /**
      * @param npc 
      * @return
+     * @throws java.lang.Exception
      */
     @RequestMapping("/")
     public String index(@RequestParam(defaultValue = "Dragon") String npc) throws Exception {
-        // TODO implement here
-        String text = new String();
-        if("dragon".equals(npc.toLowerCase())){
+        String text = "";
+        if("dragon".equalsIgnoreCase(npc)){
             DragonNPC dragon = new DragonNPC();
             text += "<br>Dragon " + dragon.Fly();
-            text += "<br>Dragon " + dragon.Swin();
-            text += "<br>Dragon " + dragon.Walk();
+            text += "<br>Dragon " + dragon.Swim();
         }
-        if("human".equals(npc.toLowerCase())){
+        if("human".equalsIgnoreCase(npc)){
             HumanNPC human = new HumanNPC();
             text += "<br>Human " + human.Fly();
-            text += "<br>Human " + human.Swin();
+            text += "<br>Human " + human.Swim();
             text += "<br>Human " + human.Walk();
-        }
-        
+        }        
         return text;
     }
-
 }

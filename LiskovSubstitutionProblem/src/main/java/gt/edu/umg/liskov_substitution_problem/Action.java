@@ -1,24 +1,12 @@
-package gt.edu.umg.LiskovSubstitutionProblem;
+package gt.edu.umg.liskov_substitution_problem;
 
-import java.util.*;
-
-/**
- * 
- */
-public class Action {
-
-    /**
-     * Default constructor
-     */
-    public Action() {
-    }
+public class Action{
 
     /**
      * @return
      * @throws java.lang.Exception
      */
     public String Fly() throws Exception {
-        // TODO implement here
         return " is flying";
     }
 
@@ -27,7 +15,6 @@ public class Action {
      * @throws java.lang.Exception
      */
     public String Walk() throws Exception {
-        // TODO implement here
         return " is walking";
     }
 
@@ -35,8 +22,7 @@ public class Action {
      * @return
      * @throws java.lang.Exception
      */
-    public String Swin() throws Exception {
-        // TODO implement here
+    public String Swim() throws Exception {
         return " is swimming";
     }
 
