@@ -2,7 +2,7 @@ package gt.edu.umg.liskov_substitution_problem;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -23,7 +23,7 @@ public class LiskovSubstitutionProblemApplication {
      * @return
      * @throws java.lang.Exception
      */
-    @RequestMapping("/")
+    @GetMapping("/")
     public String index(@RequestParam(defaultValue = "Dragon") String npc) throws Exception {
         String text = "";
         if("dragon".equalsIgnoreCase(npc)){
