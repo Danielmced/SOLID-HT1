@@ -29,8 +29,10 @@ Muchas interfaces específicas del cliente son mejores que una interfaz de uso g
 
 Dependa de abstracciones, no de concreciones.
 
-     Una clase de alto nivel no debería depender de clases de bajo nivel. Ambos deberían depender de abstracciones.
-     Las abstracciones no deberían depender de los detalles. Los detalles deberían depender de las abstracciones. 
+   Una clase de alto nivel no debería depender de clases de bajo nivel. Ambos deberían depender de abstracciones.
+   Las abstracciones no deberían depender de los detalles. Los detalles deberían depender de las abstracciones. 
+   
+ ** algunos proyectos requieren que actualice java 1.8 por default en jenkins a java 11 para que funcione mvn package de jenkins **
 
 Realizado por Daniel Estuardo Cabrera Misa 1290-17-11799
 
