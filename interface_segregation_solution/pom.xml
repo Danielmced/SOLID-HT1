@@ -9,10 +9,10 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>gt.edu.umg</groupId>
-	<artifactId>interface_segregation_problem</artifactId>
+	<artifactId>interface_segregation_solution</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>interface_segregation_problem</name>
-	<description>Problema para principio interface segregation</description>
+	<name>interface_segregation_solution</name>
+	<description>Solucion para principio interface segregation</description>
 	<properties>
 		<java.version>11</java.version>
 	</properties>
