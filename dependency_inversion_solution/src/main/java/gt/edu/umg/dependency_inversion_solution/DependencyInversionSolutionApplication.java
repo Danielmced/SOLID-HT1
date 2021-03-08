@@ -1,4 +1,4 @@
-package gt.edu.umg.dependency_inversion_problem;
+package gt.edu.umg.dependency_inversion_solution;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -8,13 +8,13 @@ import org.springframework.web.bind.annotation.RestController;
 @SpringBootApplication
 
 @RestController
-public class DependencyInversionProblemApplication {
+public class DependencyInversionSolutionApplication {
 
     /**
      * @param args
      */
     public static void main(String[] args) {
-        SpringApplication.run(DependencyInversionProblemApplication.class, args);
+        SpringApplication.run(DependencyInversionSolutionApplication.class, args);
     }
 
     /**

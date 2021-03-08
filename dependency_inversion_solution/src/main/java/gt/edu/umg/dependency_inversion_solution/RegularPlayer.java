@@ -1,12 +1,11 @@
-package gt.edu.umg.dependency_inversion_problem;
+package gt.edu.umg.dependency_inversion_solution;
 
-public class PremiumPlayer {
+public class RegularPlayer implements IRegularAwards {
 
     private String nickName;
 
     /**
-     * 
-     * @return 
+     * @return
      */
     public String getNickName() {
         return this.nickName;
@@ -15,29 +14,18 @@ public class PremiumPlayer {
     /**
      * @param nickName
      */
-    public void PremiumPlayer(String nickName) {
+    public void RegularPlayer(String nickName) {
         this.nickName = nickName;
     }
 
     /**
-     * 
-     * @return 
+     * @return
      */
+    @Override
     public String getRegularAwards() {
         String text = "";
         text +="<br> Obteniendo los premios regulares...<br>";
         text +="Premios = 3";
-        return text;
-    }
-
-    /**
-     * 
-     * @return 
-     */
-    public String getPremiumAwards() {
-        String text = "";
-        text +="<br> Obteniendo los premios premium...<br>";
-        text +="Premios = 15";
         return text;
     }
 
